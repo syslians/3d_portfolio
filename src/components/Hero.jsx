@@ -14,10 +14,10 @@ const Hero = () => {
       </div>
 
       <div>
-        <h1 className={`${styles.heroHeadText} text-white`}>풀스택개발자,
-        <span className="text-[#915eff]">김현제</span>입니다</h1>
+        <h1 className={`${styles.heroHeadText} text-white text-left`}>사용자경험을 중심으로 생각하는 <br/> 소프트웨어 개발자
+        <span className="text-[#915eff]"> 김현제</span> 입니다.</h1>
         <p className={`${styles.heroSubText} mt-2 text-white-100 whitespace-pre-wrap flex items-start mx-auto text-left`}>
-         저는 고객가치 서비스를 중시하는<br/>소프트웨어엔지니어 입니다.
+         저는 다양한 아이디어를 머릿속에서 그치지 않고 실현하여 고객감동을 창출하기 위해 끊임없이 노력하는 지원자입니다.
         </p>
       </div>
       </div>
