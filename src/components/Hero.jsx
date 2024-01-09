@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="w-1 sm:h-80 h-40 violet-gradient"/>
       </div>
 
-      <div>
+      <div className="relative z-[1]">
         <h1 className={`${styles.heroHeadText} text-white text-left`}>사용자경험을 중심으로 생각하는 <br/> 소프트웨어 개발자
         <span className="text-[#915eff]"> 김현제</span> 입니다.</h1>
         <p className={`${styles.heroSubText} mt-2 text-white-100 whitespace-pre-wrap flex items-start mx-auto text-left`}>
@@ -32,7 +32,7 @@ const Hero = () => {
               y: [0, 24, 0] //24px 위아래로 이동
             }}
             transition={{ //transition 1.5초 간격으로 무한루프 
-              duration: 1.5,
+              duration: 2.0,
               repeat: Infinity,
               repeatType: 'loop'
             }}

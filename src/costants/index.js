@@ -26,7 +26,8 @@ import {
     EDA,
     Airbnb,
     Socket,
-    ATM
+    ATM,
+    MSA
   } from "../assets";
   
   export const navLinks = [
@@ -191,7 +192,7 @@ import {
         },
       ],
       image: Airbnb,
-      source_code_link: "https://mls0q9h2-3000.asse.devtunnels.ms/",
+      source_code_link: "null",
       source_Link: "https://github.com/syslians/airbnb-clone",
       notion_Link: "https://www.notion.so/next-js-with-airbnb-f535252af0de428ea843eeb5c664442f?pvs=4"
     },
@@ -228,9 +229,61 @@ import {
         }
       ],
       image: Python,
-      source_code_link: "https://github.com/",
+      source_code_link: "null",
       source_Link: "https://github.com/syslians/airbnb-clone",
       notion_Link: "https://www.notion.so/Python-27818aa0deeb4af895331e42ebdf562f?pvs=4"
+    },
+    { 
+      name: "MSA 마이크로서비스 어플리케이션",
+      description: [
+        "이 프로젝트는스프링클라우드와 스프링 부트를 사용한 MSA 마이크로 서비스 아키텍쳐 애플리케이션 입니다.",
+        "많은 기업에서 사용하고 있는 마이크로 서비스 아키텍쳐와, REST API, Kafka, Docker 등을 경험하기 위해서 이 프로젝트를 진행하였습니다.",
+        "프로젝트에 대해서 설명하겠습니다.인텔리제이 사용하여 마이크로 서비스를 개발하였고, 모든 클라이언트의 진입점은 Spring Cloud에서 제공하는 Spring Cloud gateway 입니다.클라이언트의 요청인 gateay에 전달되면 netflix Eureka 디스커버리 서버에서 마이크로 등록된 서비스를 조회 후 마이크로 서비스에 로드밸런싱 및 라우팅을 시켜줍니다.",
+        "마이크로 서비스는 Ecommerce를 개발했다고 가정하고, 유저, 주문, 재고 서비스로 총 3가지 서비스가 존재합니다.각각의 마이크로 서비스는 REST API로 정의된 엔드포인트로 통신을 하여 필요한 정보를 주고받습니다.또한 직접적으로 데이터베이스에 접근하는 방식이 아닌 Kafka broker 서비스를 사용하여 분산 서비스에서 동기화를 합니다.또한 네트워크 장애로 서비스 간의 통신에 장애가 발생할 경우를 대비하여, Reslince4j의 CircuitBreaker 패턴을 적용하였습니다.한 서비스에서 장애가 설정된 임계값을 넘을 시 CircuitBreaker는 Open되어 장애가 전파되지 않도록 장애가 발생한 서비스를 격리시킵니다.각각의 마이크로 서비스는 분산 추적을 위해 Prometheus와 Grafana를 연동하여 데이터를 수집하고 모니터링합니다.",
+        "최종적으로 모든 서비스들은 컨테이너화되어 도커 환경에서 동작합니다.Docker bridge로 컨테이너들을 같은 가상 네트워크 대역에 두어 컨테이너끼리 통신할 수 있게 하였고, 포트포워딩을 설정하여 외부에서 접속할 수 있게 하였습니다."
+      ],
+      tags: [
+        {
+          name: "Spring Cloud",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Spring Boot",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Java",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "MaridDB",
+          color: "yellow-text-gradient",
+        },
+        {
+          name: "Kafka",
+          color: "purple-text-gradient",
+        },
+        {
+          name: "Docker",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "Prometheus",
+          color: "indigo-to-pink-gradient",
+        },
+        {
+          name: "Grafana",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Zipkin",
+          color: "green-text-gradient",
+        },
+      ],
+      image: MSA,
+      source_code_link: "null",
+      source_Link: "https://github.com/syslians/MSA.git",
+      notion_Link: "https://www.notion.so/Spring-Cloud-MSA-Micro-Service-Application-1d85d1bc85f04b4c9fbb1e7d0d50b229?pvs=4"
     },
     {
       name: "기업재무 대시보드",
@@ -392,7 +445,7 @@ import {
         },
       ],
       image: Socket,
-      source_code_link: "https://github.com/",
+      source_code_link: "null",
       source_Link: "https://github.com/syslians/socket.io",
       notion_Link: "https://www.notion.so/Node-js-Realtime-chat-app-4c2ecb6598bb4fdc91fc1d56cdeb57b6?pvs=4"
     },
@@ -441,7 +494,7 @@ import {
         },
       ],
       image: EDA,
-      source_code_link: "https://github.com/",
+      source_code_link: "null/",
       source_Link: "https://github.com/syslians/EDA",
       notion_Link: "https://www.notion.so/Node-js-MicroServices-4db89a19827749e680155adbdd9319fc?pvs=4"
     },
@@ -474,10 +527,10 @@ import {
         },
       ],
       image: ATM,
-      source_code_link: "https://github.com/",
+      source_code_link: "null",
       source_Link: "https://github.com/syslians/JAVA-ATM.git",
       notion_Link: "https://www.notion.so/JAVA-ATM-e33f6553af4642328127cc1e2421bd3f?pvs=4"
-    }
+    },
   ];
   
   export { services, technologies, experiences, projects };

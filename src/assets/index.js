@@ -46,6 +46,7 @@ import Airbnb from "./airbnb.png";
 import Socket from "./socket.png";
 import EDA from "./EDA.png";
 import ATM from "./ATM.png";
+import MSA from "./MSA.png";
 
 export {
   logo,
@@ -92,5 +93,6 @@ export {
   Airbnb,
   Socket,
   EDA,
-  ATM
+  ATM,
+  MSA
 };

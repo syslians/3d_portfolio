@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/drei';
 import CanvasLoader from '../Loader';
@@ -32,18 +32,19 @@ const Ball = (props) => {
 }
 
 const BallCanvas = ({ icon }) => {
+  const canvasProps = useMemo(() => ({
+    frameloop: 'demand',
+    dpr: [1, 2],
+    gl: { preserveDrawingBuffer: true },
+  }), []);
+
   return(
-      <Canvas
-        frameloop='demand'
-        dpr={[1, 2]}
-        gl={{ preserveDrawingBuffer: true }}
-      >
+      <Canvas {...canvasProps}>
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls enableZoom={false} />
           <Ball imgUrl={icon} />
+          <Preload all />
         </Suspense>
-
-        <Preload all />
       </Canvas>
   )
 }

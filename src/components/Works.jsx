@@ -11,8 +11,7 @@ import { fadeIn,textVariant } from '../utils/motion';
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_Link, source_Link, notion_Link }) => {
   return(
-    <motion.div
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+    <div
       >
       <Tilt
         option={{
@@ -41,6 +40,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_Link, 
               className="w-1/2 h-1/2 object-contain"
             />
            </div>
+           {source_code_Link && (           
            <div
             onClick={() => window.open(source_code_Link, "_blank")}
             className="black-gradient w-10 h-10 rounded-full flex justify-center
@@ -51,7 +51,8 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_Link, 
               alt="Netlify"
               className="w-1/2 h-1/2 object-contain"
             />
-           </div>
+           </div>)}
+
            <div
             onClick={() => window.open(notion_Link)}
             className="black-gradient w-10 h-10 rounded-full flex justify-center
@@ -79,27 +80,27 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_Link, 
           ))}
         </div>
       </Tilt>
-    </motion.div>
+    </div>
   )
 }
 
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <div>
         <p className={`${styles.sectionSubText} `}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
-      </motion.div>
+      </div>
 
       <div className="w-full flex">
-        <motion.p
-         variants={fadeIn("","", 0.1, 1)}
+        <p
+        //  variants={fadeIn("","", 0.1, 1)}
          className="mt-3 text-secondary text-[17px] max-x-3xl leading-[30px]"
         >
           저는 다양한 프로젝트를 통해 기술과 경험을 쌓아왔습니다. GitHub에 코드를 공개하고 Netlify를 통해 배포하고 있습니다. 또한, 제 작업 과정과 아이디어, CS 지식, 기술블로그 등을 노션에 기록하여 지속적인 성장을 추구하고 있습니다. 이를 통해 고객들에게 다양한 기술과 창의적인 아이디어를 제공하여 다방면으로 만족시킬 수 있는 능력을 갖추고 있습니다.
           복잡한 문제를 해결하고 다양한 기술로 작업하는 능력,
           프로젝트를 효율적으로 관리하는 저의 역량이 담겨있습니다.아래 포트폴리오를 통해 더 많은 정보를 확인하실 수 있습니다.감사합니다.
-        </motion.p>
+        </p>
       </div>
 
       <div className="mt-20 flex flex-wrap gap-7">
